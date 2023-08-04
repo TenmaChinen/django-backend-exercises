@@ -17,7 +17,7 @@ class Book(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=200, null=True, blank=True)
     publication_date = models.DateField(null=True, blank=True)
-    category = models.ManyToManyField(Category, null=True, blank=True)
+    category = models.ManyToManyField(Category, blank=True)
     author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name='books')
 
     def __str__(self):

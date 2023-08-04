@@ -1,0 +1,1 @@
+python "..\mock-project\manage.py" makemigrations & python "..\mock-project\manage.py" migrate

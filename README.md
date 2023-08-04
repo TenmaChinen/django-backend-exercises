@@ -21,14 +21,18 @@
     │   │   └── ···
     │   │
     │   ├── ···
-    │   └── chapter-N
+    │   ├── chapter-N
+    │   ├── reset-db.bat
+    │   └── setup-db.bat
     │   
     ├── mock-project <-- Ignore This
     ├── setup <-- Ignore This
     └── README.md <-- Ignore This
 ```
 2. Open the `exercises` folder
-3. Make every chapter in the proper order because future chapters may be dependant on past ones.
+3. Execute `setup-db.bat` to create the database for the Django project.
+4. Make every chapter in the proper order because future chapters may be dependant on past ones.
+4. If database starts to corrupt or appear strange records, execute the `reset-db.bat` files.
 
 # Summary
 
