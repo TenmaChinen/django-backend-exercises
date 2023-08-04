@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Delete Bookstores{% endblock %}
+
+{% block links %}
+  <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+{% endblock %}
+
+{% block styles %}
+
+  <style>
+    main{
+      padding: 20px;
+    }
+  </style>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="form-container">
+
+    <div class="form-header">
+      <div class="form-title">Delete Bookstore</div>
+    </div>
+
+    <div class="form-body">
+      <form id="form" method="POST">
+        {% csrf_token %}
+        
+        <p>
+          <label>Title :</label> {{object.title}}
+        </p>
+          
+      </form>
+    </div>
+
+    <div class="form-footer">
+      <a type="button" class="btn-form" href="{% url 'bookstores:list' %}">Cancel</a>
+      <button type="submit" form="form" class="btn-form btn-delete">Delete</button>
+  </div>
+
+{% endblock %}

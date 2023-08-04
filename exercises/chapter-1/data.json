@@ -1,0 +1,26 @@
+{
+  "categories": [
+    {"id": 1, "name": "Fantasy"},
+    {"id": 2, "name": "Mystery"},
+    {"id": 3, "name": "Horror"},
+    {"id": 4, "name": "Adventure"},
+    {"id": 5, "name": "Sci-Fi"}
+  ],
+  "authors": [
+    {"id": 1, "name": "J.K. Rowling"},
+    {"id": 2, "name": "Tolkien"},
+    {"id": 3, "name": "Stephen King"}
+  ],
+  "books": [
+    {"id": 1, "title": "Harry Potter and the Sorcerer's Stone", "author": 1, "categories": [1, 2]},
+    {"id": 2, "title": "Harry Potter and the Chamber of Secrets", "author": 1, "categories": [1, 2]},
+    {"id": 3, "title": "Harry Potter and the Prisoner of Azkaban", "author": 1, "categories": [1, 2]},
+    {"id": 4, "title": "The Lord of the Rings: The Fellowship of the Ring", "author": 2, "categories": [1, 4]},
+    {"id": 5, "title": "The Lord of the Rings: The Two Towers", "author": 2, "categories": [1, 4]},
+    {"id": 6, "title": "The Lord of the Rings: The Return of the King", "author": 2, "categories": [1, 4]},
+    {"id": 7, "title": "It", "author": 3, "categories": [2, 3]},
+    {"id": 8, "title": "The Shining", "author": 3, "categories": [3]},
+    {"id": 9, "title": "Carrie", "author": 3, "categories": [2, 3]}
+  ]
+}
+

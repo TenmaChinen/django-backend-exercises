@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Update Bookstore{% endblock %}
+
+{% block links %}
+  <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+{% endblock %}
+
+{% block styles %}
+<style>
+  main{
+    padding: 20px;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+
+  <div class="form-container">
+
+    <div class="form-header">
+      <div class="form-title">Update Bookstore</div>
+    </div>
+
+    <div class="form-body">
+      <form id="form" method="POST">
+        {% csrf_token %}
+        
+        {% for field in form %}
+          <div class="form-group">
+            {{field.label_tag}}
+            {{field}}
+          </div>
+        {% endfor %}
+          
+      </form>
+    </div>
+
+    <div class="form-footer">
+      <a type="button" class="btn-form btn-delete" href="{% url 'bookstores:delete' pk=bookstore.id %}">Delete</a>
+      <div class="footer-group">
+        <a type="button" class="btn-form" href="{% url 'bookstores:list' %}">Cancel</a>
+        <button type="submit" form="form" class="btn-form">Save</button>
+      </div>
+    </div>
+
+  </div>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Bookstores{% endblock %}
+
+{% block links %}
+  <link rel="stylesheet" href="{% static 'css/list.css' %}">
+  <link rel="stylesheet" href="{% static 'css/icons.css' %}">
+{% endblock %}
+
+{% block content %}
+
+  <header>
+    <div class="header-title">Bookstores Groups</div>
+    <a id="btn-add" class="btn-link" href="{% url 'bookstores:create' %}">Add Bookstore</a>
+  </header>
+
+  <div class="list-container">
+    
+    {% for bookstore in list_bookstore %}
+      <div class="list-item">
+        {# <a class="btn-item-title" href="{% url 'child:list' bookstore_id=bookstore.id %}">{{bookstore.title}}</a> #}
+        <a class="btn-item-title" href="">{{bookstore.title}}</a>
+        <a class="btn-icon btn-edit" href="{% url 'bookstores:update' bookstore.id %}"></a>
+      </div>
+    {% endfor %}
+      
+  </div>
+
+{% endblock %}
