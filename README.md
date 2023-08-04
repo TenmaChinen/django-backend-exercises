@@ -23,9 +23,9 @@
     │   ├── ···
     │   └── chapter-N
     │   
-    ├── mock-project `<-- Ignore`
-    ├── setup `<-- Ignore`
-    └── README.md `<-- Ignore`
+    ├── mock-project <-- Ignore This
+    ├── setup <-- Ignore This
+    └── README.md <-- Ignore This
 ```
 2. Open the `exercises` folder
 3. Make every chapter in the proper order because future chapters may be dependant on past ones.
